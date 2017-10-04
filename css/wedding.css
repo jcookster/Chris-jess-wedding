@@ -181,10 +181,11 @@ a.nav-link {
 }
 
 #map {
-    /*width: 100%;
+    margin-top: 45px;
     height: 400px;
-    margin-top: 45px;*/
+    width: 1500px;
 }
+
 .hotel-group {
     display: flex;
     flex-direction: row;
