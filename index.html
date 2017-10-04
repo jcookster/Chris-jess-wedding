@@ -1,65 +1,179 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>January 6, 2018</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.jpg">
+    <link rel="icon" type="image/png" href="img/favicon.jpg" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.jpg" sizes="16x16">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/wedding.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!--fonts -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-</head>
-<body>
-    <ul class="nav justify-content-center nav-underline" id="myTab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Chris + Jess</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="story-tab" data-toggle="tab" href="#story" role="tab" aria-controls="profile">Our Story</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="when-tab" data-toggle="tab" href="#when" role="tab" aria-controls="profile">When + Where</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="profile">Travel + Accommodations</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="registry-tab" data-toggle="tab" href="#registry" role="tab" aria-controls="profile">Registry</a>
-        </li>
-    </ul>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/wedding.css" rel="stylesheet">
 
-    <div class="tab-content">
-
-        <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="thumbnail text-center">
-                <img class="img-fluid rounded mx-auto d-block" src="img/cj.jpg" />
-                <div class="caption large-img-text">
-                    <p>January 6, 2018</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tab-pane" id="story" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="thumbnail text-center">
-                <img class="img-fluid rounded mx-auto d-block" src="img/story.jpg" />
-                <div class="caption large-img-text">
-                    <div>story</div>
-                    <div>story</div>
-                    <div>story</div>
-                    <div>story</div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="when" role="tabpanel" aria-labelledby="profile-tab">When</div>
-        <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="profile-tab">Travel</div>
-        <div class="tab-pane fade" id="registry" role="tabpanel" aria-labelledby="profile-tab">Registry</div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wedding.js"></script>
+
+    <style>
+        html, body, #map-canvas {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+</head>
+<body>
+    <ul class="nav justify-content-around nav-underline" id="myTab" role="tablist">
+        <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Chris + Jess</a></li>
+        <li class="nav-item"><a class="nav-link" id="story-tab" data-toggle="tab" href="#story" role="tab" aria-controls="profile">Our Story</a></li>
+        <li class="nav-item"><a class="nav-link" id="when-tab" data-toggle="tab" href="#when" role="tab" aria-controls="profile">Itinerary</a></li>
+        <li class="nav-item"><a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="profile">Travel + Accommodations</a></li>
+        <li class="nav-item"><a class="nav-link" id="registry-tab" data-toggle="tab" href="#registry" role="tab" aria-controls="profile">Registry</a></li>
+    </ul>
+<div class="tab-content">
+    <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="wrapper">
+            <div class="slide home rounded mx-auto title-container">
+                <span class="title-lead">The Wedding Celebration of</span>
+                <div>
+                    <span class="lined">Chris</span>
+                    <i class="fa fa-heart-o heart pulse2" aria-hidden="true"></i>
+                    <span class="lined">Jess</span>
+                </div>
+                <span class="home-location"><a target="_blank" href="https://goo.gl/maps/bS2aiYg2Cry">Scripps Seaside Forum La Jolla, CA</a></span>
+                <span class="home-date">January 6, 2018</span>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="story" role="tabpanel" aria-labelledby="home-tab">
+        <div class="wrapper">
+
+            <div class="slide story img-fluid rounded mx-auto">
+                <div class="story-container">
+                    <div class="story-title lined">A little about us</div>
+                    <div class="inner story-p">
+                        <p>
+                            <span class="first-letter">O</span>ur story began during the summer months of 2009. At the time, we were living near each other and would often cross paths as we went about our daily routine. As the saying goes, one thing led to another and before we knew it, we were on our first official date at the Miramar Air Show and have been inseparable ever since.
+                        </p>
+                        <p>While visiting Waipi’o Valley on the Big Island of Hawaii, Chris asked Jessica for her hand in marriage. We look forward to our wedding and hope you are able to join us in celebration of this joyous and momentous occasion!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane" id="when" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="slide when img-fluid rounded mx-auto">
+            <div class="inner paragraph-text">
+                <div class="story-title lined">Timeline</div>
+                <p>The event shall take place at Scripps Seaside Forum 8610 Kennel Way, La Jolla, CA 92037</p>
+                <p>4:00pm guests arrive</p>
+                <p>4:30pm wedding ceremony</p>
+                <p>5:00pm cocktail hour</p>
+                <p>6:30pm dinner</p>
+                <p>10:00pm wedding conclusion</p>
+
+                <div class="story-title lined">Parking</div>
+                Complimentary valet service provided. Parking lots are owned and operated by UCSD parking and require permits that the valet service will assist with.
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="travel" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="slide travel img-fluid rounded mx-auto">
+            <div class="inner paragraph-text">
+                <div class="story-title lined travel-title">Travel Instructions</div>
+                <a class="travel-main-link" target="_blank" href="https://goo.gl/maps/bS2aiYg2Cry">Scripps Seaside Forum 8610 Kennel Way, La Jolla, CA 92037</a>
+                <div class="hotel-group">
+                    <div class="hotel-item">
+                        <span class="hotel-title"><a class="btn btn-info" role="button" aria-pressed="true" href="http://www.marriott.com/hotels/travel/sanlj-san-diego-marriott-la-jolla/" target="_blank">MARRIOTT</a></span>
+                        <span class="hotel-address">4240 La Jolla Village Dr.</span>
+                        <span class="hotel-address">La Jolla, CA 92037</span>
+                        <span class="hotel-phone">(858) 587-1414</span>
+                    </div>
+                    <div class="hotel-item">
+                        <span class="hotel-title"><a class="btn btn-info" role="button" aria-pressed="true" href="https://lajolla.regency.hyatt.com/en/hotel/home.html" target="_blank">HYATT REGENCY</a></span>
+                        <span class="hotel-address"> 3777 La Jolla Village Dr</span>
+                        <span class="hotel-address">San Diego, CA 92122</span>
+                        <span class="hotel-phone">(858) 552-1234</span>
+                    </div>
+                    <div class="hotel-item">
+                        <span class="hotel-title"><a class="btn btn-info" role="button" aria-pressed="true" href="http://www.ljshoreshotel.com/" target="_blank">LA JOLLA SHORES</a></span>
+                        <span class="hotel-address">2000 Spindrift Drive</span>
+                        <span class="hotel-address"> La Jolla, CA 92037</span>
+                        <span class="hotel-phone">(866) 392-8762</span>
+                    </div>
+                    <div class="hotel-item">
+                        <span class="hotel-title"><a class="btn btn-info" role="button" aria-pressed="true" href="http://meritagecollection.com/estancialajolla/" target="_blank">ESTANCIA</a></span>
+                        <span class="hotel-address"> 9700 North Torrey Pines Road</span>
+                        <span class="hotel-address">La Jolla, CA 92037</span>
+                        <span class="hotel-phone">(858) 550-1000</span>
+                    </div>
+                    <div class="hotel-item">
+                        <span class="hotel-title"><a class="btn btn-info" role="button" aria-pressed="true" href="http://www.sheratonlajolla.com/" target="_blank">SHERATON</a></span>
+                        <span class="hotel-address">3299 Holiday Court</span>
+                        <span class="hotel-address">La Jolla, CA 92008</span>
+                        <span class="hotel-phone">(858) 453-5500</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+    </div>
+    <div class="tab-pane show active" id="registry" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="slide registry img-fluid rounded mx-auto">
+            <div class="registry-container">
+                <div class="registry-title dark-lined">Registry</div>
+                <div class="inner paragraph-text">
+                    <p class="registry-p">What we want most for our wedding is to have all of our friends and family there to celebrate the occasion with us, and so, more than anything we would simply enjoy your presence. But if you insist... We also enjoy Travelling, Macys and Anthropologie, so if you really would like to get us something, you can find some suggestions here.</p>
+                    <div class="registry-items">
+
+                        <a class="dark-lined honey-logo" href="https://www.honeyfund.com/wedding/nunnally" target="_blank" role="button"><img class="honey-logo" src="img/honeyfund-logo.png"/></a>
+                        <a class="dark-lined anth-logo" href="https://www.anthropologie.com/registry/listing?registryId=MDE5ZMIYMJNI" target="_blank" role="button"><img class="anth-logo" src="img/anthropologie.png"/></a>
+                        <a class="dark-lined macys-logo" href="https://www.macys.com/wgl/registry/guest/6791868" target="_blank" role="button"><img class="macys-logo" src="img/macys-logo.png"/></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdYDRHYNfoe_stU2rjvHhztKi6xbd4ev0&callback=initMap">
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
 </body>
 </html>
