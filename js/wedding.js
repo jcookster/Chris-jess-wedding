@@ -54,29 +54,33 @@
 
         var markers = [];
 
-        var scrippsMarker = new google.maps.Marker({ position: scrippsCoords, map: map });
+        var hotelIcon = "http://maps.google.com/mapfiles/kml/pal2/icon20.png";
+
+        var scrippsMarker = new google.maps.Marker({ position: scrippsCoords, map: map, icon: "http://maps.google.com/mapfiles/kml/pal2/icon11.png" });
         scrippsMarker.addListener('click', function () { closeDialogs(); scrippsInfo.open(map, this); });
         markers.push(scrippsMarker);
 
-        var marriottMarker = new google.maps.Marker({ position: marriottCoords, map: map });
+        var marriottMarker = new google.maps.Marker({ position: marriottCoords, map: map, icon: hotelIcon });
         marriottMarker.addListener('click', function () { closeDialogs(); marriottInfo.open(map, this); });
         markers.push(marriottMarker);
 
-        var hyattMarker = new google.maps.Marker({ position: hyattCoords, map: map });
+        var hyattMarker = new google.maps.Marker({ position: hyattCoords, map: map, icon: hotelIcon });
         hyattMarker.addListener('click', function () { closeDialogs(); hyattInfo.open(map, this); });
         markers.push(hyattMarker);
 
-        var shoresMarker = new google.maps.Marker({ position: shoresCoords, map: map });
+        var shoresMarker = new google.maps.Marker({ position: shoresCoords, map: map, icon: hotelIcon });
         shoresMarker.addListener('click', function () { closeDialogs(); shoresInfo.open(map, this); });
         markers.push(shoresMarker);
 
-        var estanciaMarker = new google.maps.Marker({ position: estanciaCoords, map: map });
+        var estanciaMarker = new google.maps.Marker({ position: estanciaCoords, map: map, icon: hotelIcon });
         estanciaMarker.addListener('click', function () { closeDialogs(); estanciaInfo.open(map, this); });
         markers.push(estanciaMarker);
 
-        var sheratonMarker = new google.maps.Marker({ position: sheratonCoords, map: map });
+        var sheratonMarker = new google.maps.Marker({ position: sheratonCoords, map: map, icon: hotelIcon });
         sheratonMarker.addListener('click', function () { closeDialogs(); sheratonInfo.open(map, this); });
         markers.push(sheratonMarker);
+
+        map.addListener('click', closeDialogs);
     }
 
     W.wedding.initMap = initMap;
