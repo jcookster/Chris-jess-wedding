@@ -115,14 +115,14 @@ a.nav-link {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../img/home.jpg);
 }
 .when {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/when.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/travel.jpg);
 }
 .story {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/story.jpg);
 }
 .travel {
     flex-direction: column;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/travel.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/when.jpg);
 }
 .registry {
     flex-direction: column;
