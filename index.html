@@ -28,25 +28,18 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wedding.js"></script>
 
-    <style>
-        html, body, #map-canvas {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-    </style>
-    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+   <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
 </head>
 <body>
     <ul class="nav justify-content-around nav-underline" id="myTab" role="tablist">
         <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true">Chris + Jess</a></li>
         <li class="nav-item"><a class="nav-link" id="story-tab" data-toggle="tab" href="#story" role="tab" aria-controls="profile">Our Story</a></li>
         <li class="nav-item"><a class="nav-link" id="when-tab" data-toggle="tab" href="#when" role="tab" aria-controls="profile">Itinerary</a></li>
-        <li class="nav-item"><a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="profile">Travel + Accommodations</a></li>
+        <li class="nav-item"><a class="nav-link" id="travel-tab" data-tab-name="travel" data-toggle="tab" href="#travel" role="tab" aria-controls="profile">Travel + Accommodations</a></li>
         <li class="nav-item"><a class="nav-link" id="registry-tab" data-toggle="tab" href="#registry" role="tab" aria-controls="profile">Registry</a></li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="wrapper">
                 <div class="slide home rounded mx-auto title-container">
                     <span class="title-lead">The Wedding Celebration of</span>
@@ -95,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane active" id="travel" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane" id="travel" role="tabpanel" aria-labelledby="profile-tab">
             <div class="slide travel img-fluid rounded mx-auto">
                 <div class="inner paragraph-text">
                     <div class="story-title lined travel-title">Accommodations</div>

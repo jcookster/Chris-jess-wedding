@@ -93,19 +93,24 @@
         $(tab).addClass('animated slideInRight');
     }
 
-    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-        
-        var tab = $(this).attr('href'),
-            previousIndex = $(e.relatedTarget).parent().index(),
-            currentIndex = $(this).parent().index()
+    $(document).ready(function () {
 
-        $(tab).removeClass('animated slideInRight slideInLeft');
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            
+            if($(this).data("tabName") === "travel")
+                W.wedding.initMap();
 
-        if (previousIndex < currentIndex) {
-            rightSlide(tab);
-        } else {
-            leftSlide(tab);
-        }
+            var tab = $(this).attr('href'),
+                previousIndex = $(e.relatedTarget).parent().index(),
+                currentIndex = $(this).parent().index()
+
+            $(tab).removeClass('animated slideInRight slideInLeft');
+
+            if (previousIndex < currentIndex) {
+                rightSlide(tab);
+            } else {
+                leftSlide(tab);
+            }
+        });
     });
-
 })(jQuery);
