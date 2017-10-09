@@ -2,6 +2,21 @@
     this.W = this.W || {};
     W.wedding = W.wedding || {};
 
+    function handleInternalLinking() {
+        
+        // By Default bootstrap can't link internally. This addresses the issue.
+        var hash = document.location.hash;
+        var prefix = "tab_";
+        if (hash) {
+            $('.nav a[href=\'' + hash.replace(prefix, "") + '\']').tab('show');
+        }
+
+        // Change hash for page-reload
+        $('.nav-tabs a').on('shown.bs.tab', function (e) {
+            window.location.hash = e.target.hash.replace("#", "#" + prefix);
+        });
+    }
+
     function initMap() {
 
         var scrippsContent = '<div id="content">' +
@@ -94,6 +109,8 @@
     }
 
     $(document).ready(function () {
+
+        handleInternalLinking();
 
         $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
             

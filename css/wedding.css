@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 a {
     color: white;
@@ -135,12 +135,29 @@ a.nav-link {
     margin-top: 28px;
     font-family: 'Dancing Script', cursive;
 }
+.names {
+    display: flex;
+    flex-direction: column;
+}
+.name-container {
+    display: flex;
+    flex-direction: row;
+}
+.large-first-name {
+    font-size: 150px;
+    line-height: 120px;
+}
+.large-last-name {
+    font-size: 50px;
+    align-self: center;
+}
 .home-date {
     
 }
 .heart {
-    font-size: 75px;
-    margin: 15px;
+    font-size: 150px;
+    margin: 30px;
+    align-self: center;
 }
 
 /*Our Story*/
