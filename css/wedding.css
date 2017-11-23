@@ -163,8 +163,9 @@ a.nav-link {
 /*Our Story*/
 .story-p {
     color: white;
-    width: 711px;
-    font-size: 20px;
+    width: 1000px;
+    font-size: 18px;
+	margin-top:10px;
 }
 .story-title {
     text-align: center;
