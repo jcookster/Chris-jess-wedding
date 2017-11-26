@@ -67,16 +67,21 @@ a.nav-link {
 }
 
 .slide {
-    height: 869px;
+    overflow:hidden;
+    flex-direction: column;
+    height: 918px;
+    overflow: hidden;
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 100px;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /*height: 802px;*/
-    /*margin: 56px;*/
+    /* background: center; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* height: 802px; */
+    /* margin: 56px; */
 }
 
 .semi-border:after {
@@ -112,10 +117,14 @@ a.nav-link {
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .home {
+    padding-top:200px; 
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../img/home.jpg);
 }
 .when {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/travel.jpg);
+}
+.party {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/party.jpg);
 }
 .story {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(../img/story.jpg);
@@ -160,7 +169,58 @@ a.nav-link {
     align-self: center;
 }
 
+/* Wedding Party */
+.slide-party{
+    overflow:visible;
+    flex-direction: column;
+    height: 1300px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    background-size: cover;
+}
+
+.party-p {
+    color: white;
+    width: 1200px;
+    font-size: 14px;
+}
+
+.party-bride{}
+.party-groom{}
+.party-groups{
+    display: flex;
+    flex-direction: row;
+}
+.party-officiant{
+
+}
+.party-person{
+    margin:10px;
+}
+.party-person-name{
+    font-weight:bold;    
+}
+.party-lead{
+    font-size: 27px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.party-container{
+   
+}
+.party-title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+}
 /*Our Story*/
+.story-paragraph {
+    font-family: 'Dancing Script', cursive;
+}
 .story-p {
     color: white;
     width: 1000px;
@@ -203,7 +263,9 @@ a.nav-link {
     height: 500px;
     width: 1500px;
 }
-
+.hotel-deal{
+    font-weight: bold;
+}
 .hotel-group {
     display: flex;
     flex-direction: row;
